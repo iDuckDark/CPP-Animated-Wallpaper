@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		59176BA82205331600AC1FB4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59176BA72205331600AC1FB4 /* main.cpp */; };
+		59176BB02205336700AC1FB4 /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59176BAF2205336700AC1FB4 /* libSDL2-2.0.0.dylib */; };
+		59176BB72205339A00AC1FB4 /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59176BB22205339A00AC1FB4 /* Screen.cpp */; };
+		59176BB82205339A00AC1FB4 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59176BB52205339A00AC1FB4 /* Particle.cpp */; };
+		59176BB92205339A00AC1FB4 /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59176BB62205339A00AC1FB4 /* Swarm.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,13 @@
 /* Begin PBXFileReference section */
 		59176BA42205331600AC1FB4 /* C++ Animated Wallpaper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++ Animated Wallpaper"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59176BA72205331600AC1FB4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		59176BAF2205336700AC1FB4 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/sdl2/2.0.9/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		59176BB12205339A00AC1FB4 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		59176BB22205339A00AC1FB4 /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		59176BB32205339A00AC1FB4 /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		59176BB42205339A00AC1FB4 /* Swarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swarm.h; sourceTree = "<group>"; };
+		59176BB52205339A00AC1FB4 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		59176BB62205339A00AC1FB4 /* Swarm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Swarm.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59176BB02205336700AC1FB4 /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,7 @@
 			children = (
 				59176BA62205331600AC1FB4 /* C++ Animated Wallpaper */,
 				59176BA52205331600AC1FB4 /* Products */,
+				59176BAE2205336700AC1FB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +71,22 @@
 			isa = PBXGroup;
 			children = (
 				59176BA72205331600AC1FB4 /* main.cpp */,
+				59176BB52205339A00AC1FB4 /* Particle.cpp */,
+				59176BB12205339A00AC1FB4 /* Particle.h */,
+				59176BB22205339A00AC1FB4 /* Screen.cpp */,
+				59176BB32205339A00AC1FB4 /* Screen.h */,
+				59176BB62205339A00AC1FB4 /* Swarm.cpp */,
+				59176BB42205339A00AC1FB4 /* Swarm.h */,
 			);
 			path = "C++ Animated Wallpaper";
+			sourceTree = "<group>";
+		};
+		59176BAE2205336700AC1FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59176BAF2205336700AC1FB4 /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59176BB92205339A00AC1FB4 /* Swarm.cpp in Sources */,
 				59176BA82205331600AC1FB4 /* main.cpp in Sources */,
+				59176BB82205339A00AC1FB4 /* Particle.cpp in Sources */,
+				59176BB72205339A00AC1FB4 /* Screen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +271,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C66WPHYLGP;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.9/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +285,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C66WPHYLGP;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.9/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
