@@ -9,7 +9,7 @@
 </p>
 
 
-#How to compile the project on MacOS?
+# How to compile the project on MacOS?
 
 1. Download SDL using ```brew install sdl2```
 2. Launch XCode
